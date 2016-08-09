@@ -910,9 +910,9 @@ class quickstack::controller_common (
 
    filebeat::prospector {'syslog':
       paths => [
-	'/var/log/*.log',
-	'/var/log/secure',
-	'/var/log/messages',
+        '/var/log/*.log',
+        '/var/log/secure',
+        '/var/log/messages',
       ],
       doc_type => 'syslog',
     }
@@ -922,8 +922,8 @@ class quickstack::controller_common (
         '/var/log/nova/*.log',
         '/var/log/glance/*.log',
         '/var/log/cinder/*.log',
-	'/var/log/keystone/*.log',
-	'/var/log/neutron/*.log',
+        '/var/log/keystone/*.log',
+        '/var/log/neutron/*.log',
       ],
       doc_type => 'openstack-log',
     }
