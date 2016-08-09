@@ -193,7 +193,6 @@ class quickstack::controller_common (
   $allow_migrate_to_same_host    = $quickstack::params::allow_migrate,
   $repo_server                   = $quickstack::params::repo_server,
   $elasticsearch_host            = $quickstack::params::elasticsearch_host,
-  $logstash_host                 = $quickstack::params::logstash_host,
   $enable_ceilometer             = $quickstack::params::enable_ceilometer,
   $sahara_db_password            = $quickstack::params::sahara_db_password,
 ) inherits quickstack::params {
@@ -900,7 +899,7 @@ class quickstack::controller_common (
   class { 'filebeat':
     outputs => {
       'logstash'  => {
-	'hosts'        =>  [$logstash_host],
+	'hosts'        =>  [$elasticsearch_host],
 	'loadbalance' => true
       }
     },
