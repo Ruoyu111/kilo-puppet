@@ -395,6 +395,7 @@ class quickstack::params (
   $backups_enabled,
 
   $elasticsearch_host,
+  $logstash_host,
 
   # Allow instance resize
   $allow_resize,
